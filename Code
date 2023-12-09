@@ -1,1 +1,48 @@
+def run_quiz(questions):
+    score = 0
+    for idx, question in enumerate(questions, start=1):
+        print(f"Q{idx}: {question['question']}")
+        for i, option in enumerate(question['options'], start=1):
+            print(f"{i}. {option}")
+        user_answer = input("Enter your answer (1-4): ")
+        if user_answer == str(question['answer']):
+            print("Correct!")
+            score += 1
+        else:
+            print("Incorrect!")
+
+    print(f"Quiz completed! Your final score is {score}/{len(questions)}")
+
+
+# Sample quiz questions
+python_questions = [
+    {
+        'question': 'Which of the following statements is true about Python?',
+        'options': ['It is a low-level programming language', 'It emphasizes code execution speed over readability', 'It supports multiple programming paradigms', 'It is exclusively used for web development'],
+        'answer': 3  # It supports multiple programming paradigms
+    },
+    {
+        'question': 'What symbol is used to denote comments in Python?',
+        'options': ['//', '**', '##', '#'],
+        'answer': 4  # #
+    },
+    {
+        'question': 'Which function is used to get the length of a list in Python?',
+        'options': ['size()', 'length()', 'len()', 'count()'],
+        'answer': 3  # len()
+    },
+    {
+        'question': 'What type of language is Python?',
+        'options': ['Compiled', 'Assembly', 'Interpreted', 'Machine'],
+        'answer': 3  # Interpreted
+    },
+    {
+        'question': 'What does the \'elif\' keyword signify in Python?',
+        'options': ['Else if', 'Otherwise', 'Else loop', 'None of the above'],
+        'answer': 1  # Else if
+    }
+]
+
+# Run the quiz
+run_quiz(python_questions)
 
