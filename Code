@@ -14,7 +14,7 @@ def run_quiz(questions):
     print(f"Quiz completed! Your final score is {score}/{len(questions)}")
 
 
-# Sample quiz questions
+# Questions
 python_questions = [
     {
         'question': 'Which of the following statements is true about Python?',
@@ -43,6 +43,6 @@ python_questions = [
     }
 ]
 
-# Run the quiz
+# Run It
 run_quiz(python_questions)
 
